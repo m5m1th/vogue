@@ -222,7 +222,9 @@
 		}
 
 		stylesheets = getLocalStylesheets();
-		socket.on("update", updateAllStylesheets);
+		socket.on("update", function() {
+			window.location.reload();
+		});
 	}
 
 	/**
